@@ -1,0 +1,19 @@
+.footer-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-gray-800);
+    height: 200px;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-text {
+    color: var(--color-white);
+    font-size: 20px;
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+}

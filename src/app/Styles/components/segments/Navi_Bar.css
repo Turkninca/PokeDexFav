@@ -1,0 +1,31 @@
+.navi-bar {
+    position: fixed;
+    height: 65px;
+    width: 100%;
+    background: #cecece;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    top: 0;
+    border-bottom-right-radius: 20px;
+    border-bottom-width: 2px;
+    border-bottom-color: black;
+}
+
+.buttons-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.image-box {
+    align-content: center;
+    height: 100%;
+}
+
+.text-input-container {
+    margin-left: 50px;
+    width: 400px;
+    align-content: center;
+}

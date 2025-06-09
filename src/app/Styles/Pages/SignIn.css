@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: var(--color-gray-100);
+}
+
+.form-container {
+    position: relative;
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image-container {
+    flex: 4;
+    position: relative;
+    display: flex;
+    background-color: aqua;
+}
