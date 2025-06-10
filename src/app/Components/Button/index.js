@@ -12,8 +12,8 @@ export default function RegisterButton({ type = "SignIn" }) {
 
     return(
         <button className='button-container' onClick={handleClick}>
-            <div className={`buttonbg ${type == 'SignIn' ? 'bg-gray-700' : 'bg-gray-400'}`}>
-                <span className='text-white'>
+            <div className={`buttonbg ${type == 'SignIn' ? 'bg-[#5562eb] hover:bg-[#3a49b4]' : 'transparent'}`}>
+                <span className={`opacity-100 ${type == 'SignIn' ? 'text-[#ffffff]' : 'text-[#5562eb]'}`}>
                     {type == 'SignIn' ? 'Sign In' : 'Login'}
                 </span>
             </div>

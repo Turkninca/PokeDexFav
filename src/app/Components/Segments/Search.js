@@ -66,7 +66,7 @@ function Search() {
             
             <div className="more-button-container">
                 <button className="more-button" onClick={() => pokemonStore.fetchNextPokemons(false)}>
-                    Load More Pokemon's
+                    Load More Pokemon&apos;s
                 </button>
             </div>
         </div>

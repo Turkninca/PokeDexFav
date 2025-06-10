@@ -2,7 +2,7 @@
     position: fixed;
     height: 65px;
     width: 100%;
-    background: #cecece;
+    background-color: #f6f8ff;
     display: flex;
     flex-direction: row;
     z-index: 1;
@@ -28,4 +28,5 @@
     margin-left: 50px;
     width: 400px;
     align-content: center;
+    border-color: #ced4da;
 }

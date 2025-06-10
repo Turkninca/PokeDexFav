@@ -39,11 +39,20 @@
 }
 
 .more-button {
-    background-color: gray;
+    background-color: #5562EB;
     width: 25%;
     height: 50px;
     border-radius: 10px;
-    color: white;
+    color: #FFFFFF;
+}
+
+:hover.more-button {
+    background-color: #3A49B4;
+}
+
+:active.more-button {
+    transition: all 0.2s;
+    transform: scale(1.02);
 }
 
 .more-button-container {

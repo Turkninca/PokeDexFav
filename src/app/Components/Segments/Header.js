@@ -7,7 +7,7 @@ export default function Header() {
             <div className='text-container inset-0'>
                 <div className='text-box'>
                     <h1 className="header-text">PokeFav</h1>
-                    <p className="sub-text">Add Your Favorite Pokemon's</p>
+                    <p className="sub-text">Add Your Favorite Pokemon&apos;s</p>
                 </div>
             </div>
         </div>

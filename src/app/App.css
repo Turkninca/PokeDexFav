@@ -39,3 +39,15 @@ a {
     color-scheme: dark;
   }
 }
+
+.animate-gradient-move {
+  background-size: 300% 300%;
+  animation: moveGradient 5s linear infinite;
+}
+
+@keyframes moveGradient {
+  0% { background-position: 0% 50%}
+  100% { background-position: 100% 50%}
+}
+
+
