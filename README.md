@@ -1,5 +1,20 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## How To Run
+In the project directory, you can run:
+
+yarn install to install necessary packages
+
+yarn start to run project
+
+Runs the app in the development mode. Open http://localhost:3000 to view it in your browser.
+
+or
+
+You can view project on deployed version
+
+http://pokedexfav.vercel.app/
+
 ## Getting Started
 
 First, run the development server:
