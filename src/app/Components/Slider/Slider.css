@@ -1,0 +1,17 @@
+.slider-box {
+    height: 40px;
+    display: flex;
+    border-radius: 20px;
+    width: 80px;
+    background: #000;
+    align-items: center;
+    padding: 0 6px;
+}
+
+.slider-circle {
+    background: #fff;
+    height: 28px;
+    width: 28px;
+    border-radius: 14px;
+    transition: 0.5s ease-in-out;
+}
