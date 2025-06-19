@@ -1,0 +1,138 @@
+.details-container {
+    margin-top: 65px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sticky-container {
+    height: calc(((100vh - 130px)/2)*3 );
+    z-index: -1;
+    margin-bottom: calc(150vh - (100vh - 130px)/2);
+}
+
+.image {
+    position: sticky;
+    top: 65px;
+    filter: blur(0px);
+    justify-self: center;
+    z-index: -1;
+}
+
+.slide-down-container {
+    position: absolute;
+    top: calc(100vh - 165px);
+    right: 1%;
+    z-index: 3;
+    background: aquamarine;
+    height: 100px;
+    width: 100px;
+}
+
+.sticky-filler {
+    position: sticky;
+    top: calc(65px + (100vh - 130px)/2);
+    height: calc(150vh - (100vh - 130px)/2);
+    background: #000;
+}
+
+.details-box {
+    position: absolute;
+    top: calc(100vh - 65px);
+    display: flex;
+    width: 98%;
+    margin: 0 1%;
+    background-color:  #f6f8ff;
+    flex-direction: column;
+    z-index: 0;
+    box-shadow: 0 0 2px;
+}
+
+.nameId-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    margin: 10px 0 20px 0;
+}
+
+.name-text {
+    font-weight: 600;
+    justify-self: center;
+    margin-bottom: 0;
+    margin-right: 6px;
+    font-size: 30px;
+}
+
+.id-text {
+    color: var(--color-gray-700);
+    font-weight: 700;
+    font-size: 20px
+}
+
+.sprites-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+    border-radius: 15px;
+    background-color: var(--color-gray-500);
+    box-shadow: 0 0 2px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 15px;
+    gap: 7px;
+}
+
+.carousel-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+}
+
+.sprite-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80px;
+    min-width: 50px;
+}
+
+.sprite-image {
+    height: 200px;
+    transform: tr;
+}
+
+.other-details-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+    padding: 20px 0 20px 20px;
+    flex-wrap: wrap;
+    background: turquoise;
+    width: 50%;
+    border-radius: 10px;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.loading {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prop-container {
+    display: flex;
+    flex-direction: column;
+}
+
