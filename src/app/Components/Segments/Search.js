@@ -1,23 +1,29 @@
 "use client";
 
 import Text_Input from "../TextInput";
-import "../../Styles/components/segments/Search.css";
+import "./segments/Search.css";
 
-import { useEffect, useState, useLayoutEffect } from "react";
+import { useEffect, useState, useLayoutEffect, useRef } from "react";
 import axios from "axios";
 import Card from "../Card";
 
 import { observer, Observer } from "mobx-react-lite";
 import { reaction, toJS } from "mobx";
-import pokemonStore from "@/app/stores/mobxStore";
+import pokemonStore, { domStore } from "@/app/stores/mobxStore";
 import usePokemonStore from "../../stores/zustandStore";
 
 import { motion } from "framer-motion";
 import Spinner from "../Spinner";
+import { useRouter } from "next/navigation";
 
 
 function Search() {
+    const mySectionRef = useRef(null);
+    const router = useRouter()
+
+
     useEffect(() => {
+        domStore.setRef(mySectionRef)
         // const reactor = reaction(
         //     () => pokemonStore.filterInput, 
         //     (val) => {
@@ -27,15 +33,16 @@ function Search() {
         //         }, 1000);
         //         return () => clearTimeout(getData);
         //     })
-        pokemonStore.fetchPokemonData(`/pokemon/?limit=12&offset=${(pokemonStore.pageNumber - 1) * 12}`)
+        pokemonStore.reset()
+        pokemonStore.fetchNextPokemons(false)
         // return () => reactor
     }, []);
 
-    
+
 
     return (
         <div className="search-container">
-            <div className="search-input">
+            <div className="search-input" ref={mySectionRef} id="my-input">
                 <Text_Input
                     style="h-[60px]"
                     fontSize="text-[135%]"
@@ -47,9 +54,9 @@ function Search() {
                     <Spinner />
                 ) : (
                 <div className="results-container">
-                    {pokemonStore.pokemonData.map((pokemon, index) => (
+                    {pokemonStore.sorted.map((pokemon, index) => (
                         <motion.div 
-                            key={index}
+                            key={pokemon.id.toString() + pokemon.name + index.toString()}
                             initial={{ opacity: 0, y: -30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, ease: "easeOut" }}>
@@ -58,6 +65,7 @@ function Search() {
                                 id={pokemon.id}
                                 sprite={pokemon.sprites.other["official-artwork"].front_default}
                                 types={pokemon.types.map((type) => [type])}
+                                router={router}
                             />
                         </motion.div>
                     ))}
