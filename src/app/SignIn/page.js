@@ -1,4 +1,4 @@
-import '../Styles/Pages/SignIn.css';
+import './SignIn.css';
 
 export default function SignIn() {
     return (

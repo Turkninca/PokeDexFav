@@ -1,4 +1,4 @@
-import '../../Styles/components/segments/Footer.css';
+import './segments/Footer.css';
 
 export default function Footer() {
     return (

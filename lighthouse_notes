@@ -1,0 +1,37 @@
+-Images in Webp or AVIF:
+    https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images?utm_source=lighthouse&utm_medium=devtools&hl=tr
+
+-Text Compression:
+    https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression?utm_source=lighthouse&utm_medium=devtools&hl=tr
+
+-Largest Contentful Paint Element:
+    https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint?utm_source=lighthouse&utm_medium=devtools&hl=tr
+
+-Set an explicit width and height on image elements to reduce layout shifts and improve CLS.
+
+-Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles.
+
+-Optimized images load faster and consume less cellular data.:
+    https://developer.chrome.com/docs/lighthouse/performance/uses-optimized-images?utm_source=lighthouse&utm_medium=devtools&hl=tr
+
+-Serve images that are appropriately-sized to save cellular data and improve load time.:
+    https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images?utm_source=lighthouse&utm_medium=devtools&hl=tr
+
+-Large network payloads cost users real money and are highly correlated with long load times.:
+    https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight?utm_source=lighthouse&utm_medium=devtools&hl=tr
+
+-When a button doesn't have an accessible name, screen readers announce it as "button", making it unusable for users who rely on screen readers.:
+    https://dequeuniversity.com/rules/axe/4.10/button-name
+
+-Low-contrast text is difficult or impossible for many users to read. 
+    https://dequeuniversity.com/rules/axe/4.10/color-contrast
+
+
+
+
+-SyntaxError: Failed to parse selector " ##body:has-text("login")", invalid pseudo-class :has-text(). at n.parseSelector
+
+-SyntaxError: Failed to parse selector " ##body:has-text("sign in")", invalid pseudo-class :has-text(). at n.parseSelector
+
+Vercel:
+-Unchecked runtime.lastError: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received

@@ -8,10 +8,10 @@ import Footer from "./Components/Segments/Footer";
 export default function Home() {
   return (
     <div>
-      <NaviBar />
+
       <Header />
       <Search />
-      <Footer />
+      
     </div>
   );
 }
