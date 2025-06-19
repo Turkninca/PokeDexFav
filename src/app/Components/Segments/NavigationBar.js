@@ -1,14 +1,24 @@
-import "../../Styles/components/segments/Navi_Bar.css"
+'use client'
+
+import "./segments/Navi_Bar.css"
 
 import RegisterButton from "../Button"
 import Text_Input from "../TextInput"
+import { useRouter } from "next/navigation"
 
 export default function NaviBar() {
+
+    const router = useRouter()
+
+    function handleClick() {
+        router.replace("/")
+    }
+
     return(
         <div className='navi-bar'>
-            <div className="image-box">
+            <button className="image-box" onClick={() => handleClick()}>
                 <img src={"./favicon.png"} alt="ayakkabı" className="h-[40px] pl-[80px]"/>
-            </div>
+            </button>
             <div className="text-input-container">
                 <Text_Input style='h-[40px]'/>
             </div>
