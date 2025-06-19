@@ -1,7 +1,9 @@
 import { observer } from 'mobx-react-lite';
-import '../../Styles/components/Card.css';
+import './Card.css';
 
 import React from 'react';
+import { useRouter } from 'next/router';
+import TypeBox from '../TypeBox';
 
 const colorDict = {
   "bug": {
@@ -96,7 +98,11 @@ const colorDict = {
   }
 }
 
-function Card({ sprite, id, name, types}) {
+function Card({ sprite, id, name, types, router}) {
+  
+    function handleClick() {
+        router.push(`/Details?pokemonName=${name}`)
+    }
 
     function offsetId(number, offsetWidth) {
         return (("0".repeat((offsetWidth - number.toString().length))) + number.toString()) 
@@ -115,9 +121,9 @@ function Card({ sprite, id, name, types}) {
     const color = typeList.map((typeName) =>colorDict[typeName.toString()].text)
 
     return(
-        <button className={`card-container`} style={{ background, backgroundSize: "300% 300%" }} onClick={() => alert(name)}>
+        <button className={`card-container`} style={{ background, backgroundSize: "300% 300%" }} onClick={() => handleClick()}>
             <div className="sprite-container">
-                <img src={sprite} className='card-sprite'/>
+                <img src={sprite} className='card-sprite' alt='pokemon_sprite'/>
             </div>
             <div className="name-container">
                 <p className={`text-gray-500 justify-self-center `}>{"#" + offsetId(id, 4)}</p>
@@ -125,9 +131,7 @@ function Card({ sprite, id, name, types}) {
                 <div className="types-container">
                     {typeList.map((typeName, index) => {
                         return(
-                            <div key={index} className={`type-box`} style={{backgroundColor: backgroundColor[index]}}>
-                                <span className={``} style={{color: color[index]}} >{typeName.charAt(0).toUpperCase() + typeName.slice(1) + ' '} </span>  
-                            </div> 
+                          <TypeBox key={index} typeName={typeName} />
                         )
                     })}
                 </div>
